@@ -1,8 +1,7 @@
 backend:
   name: git-gateway
-  #name: github
-  #repo: akeboshi/blog
-  branch: master
+  accept_roles:
+    - admin
 
 media_folder: "static/img" # Folder where user uploaded files should go
 public_folder: "img"
