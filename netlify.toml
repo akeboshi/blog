@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://elegant-northcutt-012f93.netlify.com/*"
+  to = "https://blog.akeboshi.dev/:splat"
+  status = 301
+  force = true
