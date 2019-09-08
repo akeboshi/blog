@@ -1,7 +1,9 @@
 ---
-title: "HugoでBlog作ってみた"
-date: 2019-09-07T15:48:27+09:00
+title: HugoでBlog作ってみた
+date: 2019-09-07T06:48:27.000Z
+description: a
 draft: false
 ---
-
 最初のpostなので、hugoで作った話書くんだろうなぁ
+
+どないなもんや？ netlifycms
