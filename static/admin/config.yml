@@ -1,6 +1,7 @@
 backend:
-  name: github
-  repo: akeboshi/blog
+  name: git-gateway
+  #name: github
+  #repo: akeboshi/blog
   branch: master
 
 media_folder: "static/img" # Folder where user uploaded files should go
