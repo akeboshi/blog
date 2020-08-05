@@ -72,7 +72,7 @@ Radeon を使ってる場合こちらのプラグインを使います。
 2. 設定から、拡張編集の設定を選ぶ
 3. 出てきたwindowに動画をDrag&Dropする (読み込むファイルに合わせるにチェックを入れる)
 4. 1ファイルにエンコードしたい動画をすべて同様の手順でいれる
-![](1.png)
+![](img/1.png)
 5. ファイル -> プラグイン出力 -> 拡張 VCE 出力を選択する (Geforceの場合は NVEEnc を選んでください)
 6. ビデオ圧縮で圧縮の設定をする
 7. 動画エンコードの設定を適当にする(画像サイズや画像の綺麗さに応じて)
@@ -83,5 +83,5 @@ Radeon を使ってる場合こちらのプラグインを使います。
   - remuxer.exe の指定に、 `.\exe_files\remuxer.exe`
   - timelineeditor.exe の指定に、`.\exe_files\timelineeditor.exe`
   - muxer.exe の指定に、`.\exe_files\muxer.exe`
-![](2.png)
+![](img/2.png)
 10. OK を押して、動画を保存する。しばらく待てば完成！
