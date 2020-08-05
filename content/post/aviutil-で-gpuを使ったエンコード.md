@@ -2,7 +2,7 @@
 title: AviUtil で GPUを使ったエンコード
 date: 2020-08-05T10:15:49.304Z
 image: img/1.png
-draft: true
+draft: false
 ---
 AviUtil で h.264 のエンコードをする
 
