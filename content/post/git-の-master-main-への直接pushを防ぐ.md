@@ -2,7 +2,7 @@
 title: Git の master/main への直接pushを防ぐ
 date: 2021-02-23T05:59:03.887Z
 image: img/github-mark-120px-plus.png
-draft: true
+draft: false
 ---
 誤って master/main へ直接pushしてしまわないようにクライアント側のhookで、特定のbranch名へのpushを禁止する
 
