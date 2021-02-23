@@ -2,7 +2,7 @@
 title: GitHub をHTTPSで使う
 date: 2021-02-23T05:41:27.982Z
 image: img/github-mark-120px-plus.png
-draft: true
+draft: false
 ---
 GitHubではsshよりhttpsでの通信を推奨している
 
