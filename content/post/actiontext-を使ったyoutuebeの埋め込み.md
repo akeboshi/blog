@@ -4,6 +4,7 @@ date: 2021-02-26T07:13:38.603Z
 draft: true
 ---
 ## Youtube を埋め込む
+
 ボタンを増築して、youtubeの動画URLを貼るだけで、youtubeの埋め込みを作ろうぜという話。
 やっているのは、画像を埋め込む時の処理の応用っぽい。
 動画だと簡単にやってるけど、ちゃんと理解しようとすると大変だと思う
@@ -78,15 +79,19 @@ hidden で持っている input と、text area を別で持っていて、見�
 
 ### 機能の追加や設定
 
-- ボタンを押したときにどのタグ名を当てるか
-    - https://github.com/basecamp/trix/blob/master/src/trix/config/block_attributes.coffee
-    - https://github.com/basecamp/trix/blob/master/src/trix/config/text_attributes.coffee
-- ツールバーのカスタマイズ
-    - https://github.com/basecamp/trix/blob/master/src/trix/config/toolbar.coffee
-- style を当てる簡単な機能を追加する
-    - https://jsfiddle.net/javan/egg7fgvv/
-- 色を当てれそう？ (未検証)
-    - https://gist.github.com/javan/a8a237f0db7648ba88d66cf9a50fa1f5
+* ボタンを押したときにどのタグ名を当てるか
+
+  * https://github.com/basecamp/trix/blob/master/src/trix/config/block_attributes.coffee
+  * https://github.com/basecamp/trix/blob/master/src/trix/config/text_attributes.coffee
+* ツールバーのカスタマイズ
+
+  * https://github.com/basecamp/trix/blob/master/src/trix/config/toolbar.coffee
+* style を当てる簡単な機能を追加する
+
+  * https://jsfiddle.net/javan/egg7fgvv/
+* 色を当てれそう？ (未検証)
+
+  * https://gist.github.com/javan/a8a237f0db7648ba88d66cf9a50fa1f5
 
 Youtube の埋め込みは、Controller から作っているので、Trix内部をちゃんと知らないと作るのは難しい… (これを理解して同等のもの作るとなるともう一週間くらい欲しい。)
 
@@ -94,10 +99,9 @@ class名の追加は今の所サポートされてないので、内部まで結
 
 ### 参考 (表示されるものとか、リクエストの内容とか)
 
-<img width="737" alt="image.png (205.4 kB)" src="https://files.esa.io/uploads/production/attachments/1213/2020/06/17/22533/0a2c80cc-47d6-4b79-8691-21b9441d52a5.png">
+![](img/image.png "image")
 
 これのリクエストとしては、 以下の input が送られる。
-
 
 ```
 <input type="hidden" name="article[body]" id="article_body_trix_input_article" value="<div><figure data-trix-attachment=&quot;{&amp;quot;contentType&amp;quot;:&amp;quot;image/png&amp;quot;,&amp;quot;filename&amp;quot;:&amp;quot;スクリーンショット 2020-06-16 11.25.02.png&amp;quot;,&amp;quot;filesize&amp;quot;:162206,&amp;quot;height&amp;quot;:276,&amp;quot;sgid&amp;quot;:&amp;quot;BAh7CEkiCGdpZAY6BkVUSSIwZ2lkOi8vYXBwL0FjdGl2ZVN0b3JhZ2U6OkJsb2IvMzE_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiD2F0dGFjaGFibGUGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d3494cdca81ece9d8360b982dcef17a417fd095e&amp;quot;,&amp;quot;url&amp;quot;:&amp;quot;http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c29f83c871e80f8bf195754fb8d5ef31dca4284f/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-06-16%2011.25.02.png&amp;quot;,&amp;quot;width&amp;quot;:310}&quot; data-trix-content-type=&quot;image/png&quot; data-trix-attributes=&quot;{&amp;quot;presentation&amp;quot;:&amp;quot;gallery&amp;quot;}&quot; class=&quot;attachment attachment--preview attachment--png&quot;><img src=&quot;http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c29f83c871e80f8bf195754fb8d5ef31dca4284f/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-06-16%2011.25.02.png&quot; width=&quot;310&quot; height=&quot;276&quot;><figcaption class=&quot;attachment__caption&quot;><span class=&quot;attachment__name&quot;>スクリーンショット 2020-06-16 11.25.02.png</span> <span class=&quot;attachment__size&quot;>158.4 KB</span></figcaption></figure><br><br></div><h2>Header 1</h2><div><strong>bold</strong></div>">
@@ -123,6 +127,7 @@ DB に保存されるのは
 ```
 <div><action-text-attachment sgid="BAh7CEkiCGdpZAY6BkVUSSIwZ2lkOi8vYXBwL0FjdGl2ZVN0b3JhZ2U6OkJsb2IvMzE_ZXhwaXJlc19pbgY7AFRJIgxwdXJwb3NlBjsAVEkiD2F0dGFjaGFibGUGOwBUSSIPZXhwaXJlc19hdAY7AFQw--d3494cdca81ece9d8360b982dcef17a417fd095e" content-type="image/png" url="http://localhost:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c29f83c871e80f8bf195754fb8d5ef31dca4284f/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202020-06-16%2011.25.02.png" filename="スクリーンショット 2020-06-16 11.25.02.png" filesize="162206" width="310" height="276" presentation="gallery"></action-text-attachment><br><br></div><h2>Header 1</h2><div><strong>bold</strong></div>
 ```
+
 ## sgid の中身
 
 ```
@@ -159,4 +164,3 @@ p "<iframe id='ytplayer' type... src='https://www.youtube.com/embed/#{foo.id}'><
 ```
 
 のようにすれば良さそうか。
-
